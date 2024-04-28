@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button onclick="ques1()">Question:1</button>
+<button onclick="ques2()">Question:2</button>
+<button onclick="ques3()">Question:3</button>
+<button onclick="ques4()">Question:4</button>
+<button onclick="ques10()">Question:10</button>
+<button onclick="ques11()">Question:11</button>
+<button onclick="ques12()">Question:12</button>
+<button onclick="ques13()">Question:13</button>
+<button onclick="ques15()">Question:15</button>
+<button onclick="ques18()">Question:18</button>
+
+
+<body>
+    <script>
+        function ques1(){
+        let firName=prompt("Enter Your First Name")
+        let sirName=prompt("Enter Your Second Name")
+        let fullName=firName+sirName;
+        document.write("Welcome To Our Portal "+fullName)
+          }  
+          function ques2(){
+          var fvrtmob=prompt("Enter Your Current Fav Player From PCT ");
+          document.write("The Length Of String Is "+fvrtmob.length)
+          }
+          function ques3(){
+          let nam=prompt("Enter Any Name");
+        let cname=prompt("Enter A Charecter To Find Where Its Located")
+        let index=nam.indexOf(cname)
+        document.write("Word "+`${cname}`+" Charecter At is "+`${index+1}`+"<BR>")
+        }
+        function ques4(){
+          let nam=prompt("Enter Any Name");
+        let cname=+prompt("Enter A Num To Find a Charecter")
+        let index=nam.charAt(cname)
+        document.write("Number "+`${cname}`+" Charecter  is "+`${index}`+"<BR>")
+        }
+        document.write("<h3>Question: 7 </h3>")
+        var city="karachi";
+        document.write("First Value Is :"+city+"<BR>")
+        city="Lahore"
+        document.write("Updated Value Is :"+city+"<BR>")
+     document.write("<h3>Question:8</h3>")
+     var message = "Ali and Sami are best friends. They play cricket and football together.";
+     document.write(message+"<BR>")
+     var modifiedMessage = message.split("and").join("&");
+     document.write(modifiedMessage+"<BR>")
+        document.write("<h3>Question:9</h3>")
+        var value1=500;
+        document.write("Value :"+ value1+"<BR>"+"Type :"+ typeof(value1.toString())+"<BR>")
+            document.write("Value :"+ value1+"<BR>"+"Type :"+ typeof(value1))
+                document.write("<h3>Question:10</h3>")
+                function ques10(){
+                var n1=prompt("Enter A Name for Change into a UPPER CASE");
+                document.write(n1.toLocaleUpperCase())
+                }
+                function ques11(){
+                var n2=prompt("Enter a Name TO Change a First Letter");
+                document.write(n2.charAt(0).toLocaleUpperCase()+n2.slice(1))
+                }
+                function ques12(){
+                var n3=prompt("Enter A Number to Remove A Decimal ");
+                var n4=n3.toString().split(".").join("")
+                document.write(n4)
+            }
+            function ques13(){
+            var usnam = prompt("Enter your username:");
+
+
+if (usnam.includes("@") || usnam.includes(".") || usnam.includes(",") || usnam.includes("!")) {
+  
+    alert("Please enter a valid username without special symbols [@ . , !]");
+} else {
+
+    alert("Welcome, " + username + "!");
+}
+            }
+            function ques15(){
+            var username1=prompt("Create A Passwod  ");
+
+if(/^[a-zA-Z]/.test(username1)){
+    document.write(`${username1}`+" This Password Is Valid")
+}
+else{
+    document.write(" This Password Is Not Valid")
+}
+            }
+
+    var university = "University of Karachi";
+var array = university.split("");
+document.write(array.join("<BR>"));
+// document.write(array)
+document.write("<h3>Question:18</h3>")
+let last="The quick brown fox jumps over The lazy dog.".toLowerCase()
+document.write(last)
+function ques18(){
+let num=0;
+let userf=prompt("Enter a Word To Find How Many Time Its Comes").toLowerCase();
+fl=false;
+for(let i=0;i<last.length;i++){
+    var d=last.split(" ")
+    // console.log(d)
+    // document.write(last[i].split(" "))
+    if(d[i] === userf){
+        num++
+        var ret=d[i];
+        fl=true
+        // break
+    }
+
+}
+if(fl){
+document.write(ret+" Is Present at "+num+" Times")
+}
+else{
+    
+    document.write("Nothing")
+}
+}
+                </script>
+</body>
+</html>
